@@ -753,7 +753,19 @@
   function setAct(num) {
     document.querySelectorAll('.act-group').forEach(el => el.classList.remove('active'));
     const target = document.getElementById(`act-${num}`);
-    if (target) target.classList.add('active');
+    if (target) {
+      if (num === 2 || num === 3) {
+        const clone = target.cloneNode(true);
+        target.parentNode.replaceChild(clone, target);
+        clone.classList.add('active');
+      } else {
+        target.classList.add('active');
+      }
+      const stage = document.getElementById('stage');
+      if (stage && typeof stage.setCurrentTime === 'function') {
+        try { stage.setCurrentTime(0); } catch (e) {}
+      }
+    }
     document.querySelectorAll('.dot').forEach(d => d.classList.toggle('active', Number(d.dataset.act) === num));
   }
   function setSubtitle(text, tag = '') {

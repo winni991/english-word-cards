@@ -138,24 +138,40 @@ window.WORD_BANK = [
     mnemonicFormula: "ab(le) 能够 + -ility(名词后缀)",
     mnemonicDesc: "👉 谐音“阿比力踢”：阿比有力气踢球 = 有【能力】！",
     mnemonicSpeech: "记忆口诀：able 变成名词 ability，表示能力、才能。",
-    act2Title: "第 2 幕 · 篮球场上的超强能力",
-    act2Narration: "面对高高的篮筐，小明苦练半年，终于具备了一跃扣篮的超强能力！",
-    act2Subtitle: "苦练半年后，小明一跃而起完成扣篮——这就是实打实的 ability（能力）！",
+    act2Title: "第 2 幕 · 飞身跃起扣篮的能力",
+    act2Narration: "面对高高的篮筐，小明助跑起跳，把篮球稳稳扣进篮筐，展现出超强能力！",
+    act2Subtitle: "助跑起跳、篮球划出抛物线入网——这就是实打实的 ability（能力）！",
     act2Sfx: "unlock",
     act2Svg: `
-      <rect x="0" y="330" width="800" height="120" fill="#fed7aa"/>
-      <rect x="590" y="110" width="16" height="220" fill="#475569"/>
-      <rect x="520" y="95" width="90" height="65" rx="6" fill="#ffffff" stroke="#ef4444" stroke-width="4"/>
-      <ellipse cx="535" cy="150" rx="22" ry="6" fill="none" stroke="#f97316" stroke-width="5"/>
-      <g class="anim-float">
-        <circle cx="380" cy="175" r="20" fill="#fed7aa"/>
-        <rect x="366" y="195" width="28" height="46" rx="8" fill="#7c3aed"/>
-        <line x1="394" y1="205" x2="445" y2="155" stroke="#fed7aa" stroke-width="8" stroke-linecap="round"/>
-        <circle cx="460" cy="145" r="18" fill="#f97316" stroke="#9a3412" stroke-width="2"/>
+      <rect x="0" y="340" width="800" height="110" fill="#fed7aa"/>
+      <rect x="610" y="100" width="16" height="240" fill="#475569"/>
+      <rect x="540" y="85" width="90" height="65" rx="6" fill="#ffffff" stroke="#ef4444" stroke-width="4"/>
+      <ellipse cx="545" cy="145" rx="24" ry="7" fill="none" stroke="#f97316" stroke-width="5"/>
+      <path d="M 523 147 L 533 175 L 557 175 L 567 147" fill="none" stroke="#94a3b8" stroke-width="2.5">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="0.8s" repeatCount="indefinite"/>
+      </path>
+      <!-- Jumping Player -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,85; 120,-35; 150,0; 150,0" keyTimes="0;0.45;0.75;1" dur="2.6s" repeatCount="indefinite"/>
+        <circle cx="230" cy="200" r="18" fill="#fed7aa"/>
+        <rect x="216" y="218" width="28" height="44" rx="8" fill="#7c3aed"/>
+        <line x1="242" y1="226" x2="278" y2="185" stroke="#fed7aa" stroke-width="7" stroke-linecap="round"/>
+        <line x1="222" y1="262" x2="210" y2="295" stroke="#1e293b" stroke-width="7" stroke-linecap="round"/>
+        <line x1="238" y1="262" x2="252" y2="295" stroke="#1e293b" stroke-width="7" stroke-linecap="round"/>
       </g>
-      <rect x="130" y="170" width="180" height="80" rx="14" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
-      <text x="220" y="203" text-anchor="middle" font-size="16" font-weight="800" fill="#7c3aed">⚡ 能力值 MAX</text>
-      <text x="220" y="230" text-anchor="middle" font-size="14" fill="#475569">the ability to jump</text>
+      <!-- Arcing Basketball -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="280,210; 410,95; 545,145; 545,300" keyTimes="0;0.35;0.65;1" dur="2.6s" repeatCount="indefinite"/>
+        <circle cx="0" cy="0" r="18" fill="#f97316" stroke="#9a3412" stroke-width="2.5"/>
+        <path d="M -17 0 Q 0 -10 17 0 M 0 -17 Q 10 0 0 17" fill="none" stroke="#9a3412" stroke-width="2"/>
+      </g>
+      <!-- Power Meter -->
+      <rect x="65" y="130" width="160" height="72" rx="14" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+      <text x="145" y="158" text-anchor="middle" font-size="14" font-weight="800" fill="#7c3aed">⚡ 能力充能中</text>
+      <rect x="85" y="172" width="120" height="14" rx="7" fill="#ede9fe"/>
+      <rect x="85" y="172" width="120" height="14" rx="7" fill="#7c3aed">
+        <animate attributeName="width" values="20;120;120" dur="2.6s" repeatCount="indefinite"/>
+      </rect>
     `,
     collocationTitle: "the ability to do sth.",
     collocationSub: "做某事的能力",
@@ -184,25 +200,31 @@ window.WORD_BANK = [
     mnemonicFormula: "词根词缀：able = 能够的（常见后缀 -able 表“可…的”）",
     mnemonicDesc: "👉 谐音“诶博”：知识渊博，所以啥都【能够】搞定！",
     mnemonicSpeech: "记忆口诀：able 表示能够的、有能力的，常考 be able to do。",
-    act2Title: "第 2 幕 · 超能机器人 vs 断电小车",
-    act2Narration: "左边的小机器人能自己爬上陡坡，而右边没电的小车却寸步难行。",
-    act2Subtitle: "左边机器人动力满满爬上斜坡（be able to），右边没电小车动弹不得！",
+    act2Title: "第 2 幕 · 爬坡机器人 vs 没电小车",
+    act2Narration: "左边的小机器人马力全开爬上陡坡，而右边没电的小车只能原地打转。",
+    act2Subtitle: "左边机器人一路爬上斜坡（be able to），右边没电小车原地颤抖！",
     act2Sfx: "unlock",
     act2Svg: `
-      <polygon points="80,350 380,350 380,210" fill="#bbf7d0"/>
-      <rect x="430" y="340" width="320" height="14" fill="#cbd5e1"/>
-      <g class="anim-slide">
-        <rect x="210" y="210" width="54" height="54" rx="12" fill="#059669"/>
-        <circle cx="227" cy="232" r="5" fill="#fff"/>
-        <circle cx="247" cy="232" r="5" fill="#fff"/>
-        <path d="M 225 248 Q 237 256 249 248" fill="none" stroke="#fff" stroke-width="3"/>
-        <text x="237" y="196" text-anchor="middle" font-size="14" font-weight="800" fill="#059669">be able to ✅</text>
-      </g>
+      <polygon points="70,360 390,360 390,190" fill="#bbf7d0" stroke="#10b981" stroke-width="2"/>
+      <rect x="420" y="350" width="330" height="12" fill="#cbd5e1"/>
+      <!-- Climbing Robot -->
       <g>
-        <rect x="540" y="290" width="70" height="44" rx="10" fill="#94a3b8"/>
-        <circle cx="556" cy="336" r="10" fill="#334155"/>
-        <circle cx="594" cy="336" r="10" fill="#334155"/>
-        <text x="575" y="275" text-anchor="middle" font-size="14" font-weight="800" fill="#dc2626">电量 0% ❌</text>
+        <animateTransform attributeName="transform" type="translate" values="90,295; 310,165; 310,165" keyTimes="0;0.75;1" dur="2.8s" repeatCount="indefinite"/>
+        <rect x="0" y="0" width="52" height="48" rx="10" fill="#059669"/>
+        <circle cx="16" cy="18" r="5" fill="#fff"/>
+        <circle cx="36" cy="18" r="5" fill="#fff"/>
+        <path d="M 15 32 Q 26 40 37 32" fill="none" stroke="#fff" stroke-width="3"/>
+        <circle cx="12" cy="52" r="8" fill="#1e293b"/>
+        <circle cx="40" cy="52" r="8" fill="#1e293b"/>
+        <text x="26" y="-12" text-anchor="middle" font-size="14" font-weight="800" fill="#059669">be able to ✅</text>
+      </g>
+      <!-- Dead Car Shaking -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,0; -4,0; 4,0; 0,0" dur="0.4s" repeatCount="indefinite"/>
+        <rect x="530" y="295" width="76" height="42" rx="10" fill="#94a3b8"/>
+        <circle cx="548" cy="340" r="11" fill="#334155"/>
+        <circle cx="588" cy="340" r="11" fill="#334155"/>
+        <text x="568" y="278" text-anchor="middle" font-size="14" font-weight="800" fill="#dc2626">电量 0% ❌</text>
       </g>
     `,
     collocationTitle: "be able to do sth.",
@@ -232,20 +254,26 @@ window.WORD_BANK = [
     mnemonicFormula: "a-(在) + bove(高处) → 在高处 = 在……上方",
     mnemonicDesc: "👉 反义词是 below（在下方）；注意 above 不一定垂直正上方！",
     mnemonicSpeech: "记忆口诀：above 在上方，反义词 below 在下方，above all 最重要的是。",
-    act2Title: "第 2 幕 · 云层之上的热气球",
-    act2Narration: "热气球缓缓升起，越过白雪皑皑的山峰，飞到了云层之上！",
-    act2Subtitle: "热气球飞在云层和山峰之上（above the clouds），视野豁然开朗！",
+    act2Title: "第 2 幕 · 升上云层之上的热气球",
+    act2Narration: "热气球迎风缓缓升起，穿破层层白云，飞到了高高的群山与云层之上！",
+    act2Subtitle: "热气球缓缓升起，越过白云飘在山峰之上（above the clouds）！",
     act2Sfx: "rain",
     act2Svg: `
-      <polygon points="100,370 260,210 420,370" fill="#94a3b8"/>
-      <polygon points="340,370 540,190 740,370" fill="#64748b"/>
-      <path d="M 160 270 Q 200 240 250 255 Q 300 235 340 265 Q 370 285 330 300 L 170 300 Z" fill="#ffffff" opacity="0.9"/>
-      <path d="M 430 250 Q 480 220 540 235 Q 590 215 630 245 Q 660 265 620 280 L 440 280 Z" fill="#ffffff" opacity="0.9"/>
-      <g class="anim-float">
+      <polygon points="80,380 250,215 420,380" fill="#94a3b8"/>
+      <polygon points="340,380 540,190 740,380" fill="#64748b"/>
+      <!-- Drifting Clouds -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="-20,0; 30,0; -20,0" dur="4s" repeatCount="indefinite"/>
+        <path d="M 150 265 Q 190 235 240 250 Q 290 230 330 260 Q 360 280 320 295 L 160 295 Z" fill="#ffffff" opacity="0.92"/>
+        <path d="M 430 245 Q 480 215 540 230 Q 590 210 630 240 Q 660 260 620 275 L 440 275 Z" fill="#ffffff" opacity="0.92"/>
+      </g>
+      <!-- Rising Hot Air Balloon -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,95; 0,-15; 0,0; 0,-15" dur="3.6s" repeatCount="indefinite"/>
         <ellipse cx="400" cy="115" rx="44" ry="52" fill="#f97316"/>
         <path d="M 380 164 L 420 164 L 412 190 L 388 190 Z" fill="#92400e"/>
-        <rect x="460" y="95" width="170" height="40" rx="10" fill="#0ea5e9"/>
-        <text x="545" y="120" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">above the clouds</text>
+        <rect x="460" y="95" width="175" height="40" rx="10" fill="#0ea5e9"/>
+        <text x="547" y="120" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">above the clouds</text>
       </g>
     `,
     collocationTitle: "above all",
@@ -275,20 +303,22 @@ window.WORD_BANK = [
     mnemonicFormula: "ac-(朝向) + cess-(走) + -ible(可…的)",
     mnemonicDesc: "👉 能够“走过去”的 = 可到达的 / 易获取的！",
     mnemonicSpeech: "记忆口诀：ac 朝向加 cess 走，能走过去就是 accessible，易接近的。",
-    act2Title: "第 2 幕 · 无障碍斜坡 vs 高台阶",
-    act2Narration: "高高的台阶挡住了轮椅，而旁边的无障碍斜坡让图书馆变得人人都能轻松进入！",
-    act2Subtitle: "高台阶让人望而却步，无障碍通道让图书馆人人可达（accessible）！",
+    act2Title: "第 2 幕 · 顺畅滑上无障碍坡道",
+    act2Narration: "有了无障碍斜坡，轮椅顺畅地滑进图书馆大门，知识对每个人都易接近！",
+    act2Subtitle: "沿着无障碍坡道轻松滑入图书馆（be accessible to everyone）！",
     act2Sfx: "unlock",
     act2Svg: `
-      <rect x="460" y="150" width="240" height="190" rx="8" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/>
-      <text x="580" y="195" text-anchor="middle" font-size="18" font-weight="800" fill="#1e293b">🏛️ 城市图书馆</text>
-      <rect x="540" y="235" width="80" height="105" fill="#0f766e"/>
-      <polygon points="240,340 460,340 460,260" fill="#99f6e4" stroke="#0d9488" stroke-width="2"/>
-      <text x="365" y="325" text-anchor="middle" font-size="13" font-weight="800" fill="#0f766e">♿ 无障碍坡道 (accessible)</text>
-      <g class="anim-slide">
-        <circle cx="290" cy="270" r="14" fill="#fed7aa"/>
-        <rect x="278" y="284" width="22" height="28" rx="6" fill="#0284c7"/>
-        <circle cx="288" cy="322" r="16" fill="none" stroke="#1e293b" stroke-width="4"/>
+      <rect x="470" y="140" width="240" height="200" rx="8" fill="#e2e8f0" stroke="#64748b" stroke-width="2"/>
+      <text x="590" y="185" text-anchor="middle" font-size="18" font-weight="800" fill="#1e293b">🏛️ 城市图书馆</text>
+      <rect x="550" y="230" width="80" height="110" fill="#0f766e"/>
+      <polygon points="180,340 470,340 470,250" fill="#99f6e4" stroke="#0d9488" stroke-width="2"/>
+      <text x="345" y="325" text-anchor="middle" font-size="13" font-weight="800" fill="#0f766e">♿ 无障碍坡道 (accessible)</text>
+      <!-- Moving Wheelchair -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="160,265; 435,180; 435,180" keyTimes="0;0.8;1" dur="2.8s" repeatCount="indefinite"/>
+        <circle cx="0" cy="0" r="14" fill="#fed7aa"/>
+        <rect x="-12" y="14" width="22" height="28" rx="6" fill="#0284c7"/>
+        <circle cx="-2" cy="52" r="16" fill="none" stroke="#1e293b" stroke-width="4"/>
       </g>
     `,
     collocationTitle: "be accessible to sb.",
@@ -318,19 +348,27 @@ window.WORD_BANK = [
     mnemonicFormula: "a-(去) + chieve(chief 首领/顶点) → 到达顶点 = 取得成功",
     mnemonicDesc: "👉 谐音“阿奇夫”：阿奇夫登顶插旗 = 【实现】梦想！",
     mnemonicSpeech: "记忆口诀：a 加上 chief 顶点，登上顶点就是 achieve，实现、取得成功。",
-    act2Title: "第 2 幕 · 登顶插旗实现梦想",
-    act2Narration: "登山者一步步向上攀登，终于站在山顶挥舞旗帜，实现了登顶目标！",
-    act2Subtitle: "历经汗水终于登顶插旗——成功实现目标（achieve one's goal）！",
+    act2Title: "第 2 幕 · 一步步登顶插旗",
+    act2Narration: "登山者一步步向上攀登，终于站在山顶挥舞红旗，实现了登顶目标！",
+    act2Subtitle: "沿着山坡不断攀登，终于在山顶插上红旗（achieve one's goal）！",
     act2Sfx: "unlock",
     act2Svg: `
       <polygon points="80,390 400,140 720,390" fill="#cbd5e1"/>
       <polygon points="315,206 400,140 485,206 445,220 400,200 355,220" fill="#ffffff"/>
-      <g class="anim-float">
-        <line x1="400" y1="140" x2="400" y2="65" stroke="#1e293b" stroke-width="4"/>
-        <polygon points="402,68 465,86 402,104" fill="#e11d48"/>
-        <circle cx="372" cy="112" r="14" fill="#fed7aa"/>
-        <rect x="361" y="126" width="22" height="32" rx="6" fill="#2563eb"/>
-        <text x="480" y="92" font-size="16" font-weight="800" fill="#e11d48">Goal Achieved! 🏆</text>
+      <!-- Climbing Person -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="160,305; 270,220; 365,125; 365,125" keyTimes="0;0.4;0.8;1" dur="3.0s" repeatCount="indefinite"/>
+        <circle cx="0" cy="0" r="14" fill="#fed7aa"/>
+        <rect x="-11" y="14" width="22" height="30" rx="6" fill="#2563eb"/>
+      </g>
+      <!-- Waving Flag at Peak -->
+      <g>
+        <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.65;0.8;1" dur="3.0s" repeatCount="indefinite"/>
+        <line x1="400" y1="140" x2="400" y2="62" stroke="#1e293b" stroke-width="4"/>
+        <polygon points="402,65 468,83 402,102" fill="#e11d48">
+          <animate attributeName="points" values="402,65 468,83 402,102; 402,65 460,78 402,102; 402,65 468,83 402,102" dur="0.7s" repeatCount="indefinite"/>
+        </polygon>
+        <text x="535" y="88" text-anchor="middle" font-size="16" font-weight="800" fill="#e11d48">Goal Achieved! 🏆</text>
       </g>
     `,
     collocationTitle: "achieve one's dream / goal",
@@ -358,24 +396,36 @@ window.WORD_BANK = [
     themeColor: "#ea580c",
     syllables: ["ac", "tion"],
     mnemonicFormula: "act(做/行动) + -ion(名词后缀)",
-    mnemonicDesc: "👉 导演喊“Action!”就是开拍行动起来！",
+    mnemonicDesc: "👉 导演喊“Action!”打板一响，立刻开跑行动！",
     mnemonicSpeech: "记忆口诀：act 行动加上名词后缀 ion，就是 action，行动。",
-    act2Title: "第 2 幕 · 少空谈，立刻行动！",
-    act2Narration: "别光坐在沙发上空想啦！导演打板一响，主角立刻起身行动起来！",
-    act2Subtitle: "告别空想，打板声一响立刻起身行动（take action）！",
+    act2Title: "第 2 幕 · 打板一响，立刻开跑！",
+    act2Narration: "导演打板咔嚓一合，主角立刻迈开大步向前冲刺行动！",
+    act2Subtitle: "打板声咔嚓一响，主角立刻向前冲刺（take action）！",
     act2Sfx: "crash",
     act2Svg: `
-      <rect x="130" y="130" width="190" height="120" rx="12" fill="#1e293b"/>
-      <polygon points="130,130 320,100 320,122 130,152" fill="#f97316"/>
-      <text x="225" y="200" text-anchor="middle" font-size="26" font-weight="900" fill="#ffffff">ACTION! 🎬</text>
-      <g class="anim-slide">
-        <circle cx="480" cy="180" r="20" fill="#fed7aa"/>
-        <rect x="466" y="200" width="28" height="48" rx="8" fill="#ea580c"/>
-        <line x1="466" y1="248" x2="440" y2="295" stroke="#1e293b" stroke-width="7" stroke-linecap="round"/>
-        <line x1="494" y1="248" x2="530" y2="290" stroke="#1e293b" stroke-width="7" stroke-linecap="round"/>
-        <text x="560" y="210" font-size="16" font-weight="800" fill="#ea580c">立刻出发 🏃‍♂️</text>
+      <rect x="0" y="310" width="800" height="140" fill="#f1f5f9"/>
+      <!-- Clapperboard -->
+      <g>
+        <rect x="90" y="150" width="180" height="110" rx="10" fill="#1e293b"/>
+        <text x="180" y="215" text-anchor="middle" font-size="24" font-weight="900" fill="#ffffff">ACTION!</text>
+        <g>
+          <animateTransform attributeName="transform" type="rotate" values="-22 90 150; 0 90 150; 0 90 150" keyTimes="0;0.25;1" dur="2.4s" repeatCount="indefinite"/>
+          <rect x="90" y="124" width="180" height="24" rx="4" fill="#f97316"/>
+        </g>
       </g>
-      <rect x="0" y="300" width="800" height="150" fill="#f1f5f9"/>
+      <!-- Sprinting Runner -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="330,190; 640,190" dur="2.4s" repeatCount="indefinite"/>
+        <circle cx="0" cy="0" r="19" fill="#fed7aa"/>
+        <rect x="-13" y="19" width="26" height="45" rx="8" fill="#ea580c"/>
+        <line x1="-6" y1="64" x2="-24" y2="108" stroke="#1e293b" stroke-width="7" stroke-linecap="round">
+          <animate attributeName="x2" values="-24;16;-24" dur="0.45s" repeatCount="indefinite"/>
+        </line>
+        <line x1="6" y1="64" x2="26" y2="105" stroke="#1e293b" stroke-width="7" stroke-linecap="round">
+          <animate attributeName="x2" values="26;-18;26" dur="0.45s" repeatCount="indefinite"/>
+        </line>
+        <text x="55" y="25" font-size="15" font-weight="800" fill="#ea580c">GO! 💨</text>
+      </g>
     `,
     collocationTitle: "take action (to do sth.)",
     collocationSub: "采取行动（做某事）",
@@ -404,23 +454,33 @@ window.WORD_BANK = [
     mnemonicFormula: "active(活跃的) + -ity(名词后缀)",
     mnemonicDesc: "👉 校园里最活跃热闹的事情 = 各种【活动】！",
     mnemonicSpeech: "记忆口诀：active 活跃的变成名词 activity，表示各种活动。",
-    act2Title: "第 2 幕 · 多彩的校园社团活动",
-    act2Narration: "下课铃一响，校园社团活动开始啦：有的同学在画画，有的在踢球，有的在弹吉他！",
-    act2Subtitle: "社团活动丰富多彩：画画、踢球、弹吉他——这就是 campus activities！",
+    act2Title: "第 2 幕 · 活力满满的校园活动",
+    act2Narration: "下课铃一响，操场上热闹极了：足球弹跳飞舞，音符欢快跳动，课外活动开始啦！",
+    act2Subtitle: "操场上足球弹跳、音符飞舞——活力满满的课外活动（activities）！",
     act2Sfx: "unlock",
     act2Svg: `
-      <rect x="70" y="130" width="190" height="180" rx="16" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
-      <text x="165" y="195" text-anchor="middle" font-size="44">🎨</text>
-      <text x="165" y="245" text-anchor="middle" font-size="16" font-weight="800" fill="#15803d">绘画社团</text>
-
-      <rect x="305" y="115" width="190" height="195" rx="16" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" class="anim-pulse"/>
-      <text x="400" y="185" text-anchor="middle" font-size="48">⚽</text>
-      <text x="400" y="240" text-anchor="middle" font-size="16" font-weight="800" fill="#b45309">校园足球赛</text>
-      <text x="400" y="270" text-anchor="middle" font-size="13" fill="#78350f">after-school activities</text>
-
-      <rect x="540" y="130" width="190" height="180" rx="16" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
-      <text x="635" y="195" text-anchor="middle" font-size="44">🎸</text>
-      <text x="635" y="245" text-anchor="middle" font-size="16" font-weight="800" fill="#0369a1">音乐社团</text>
+      <rect x="0" y="330" width="800" height="120" fill="#86efac"/>
+      <!-- Bouncing Soccer Ball -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="180,295; 260,175; 340,295; 260,175; 180,295" dur="2.2s" repeatCount="indefinite"/>
+        <circle cx="0" cy="0" r="28" fill="#ffffff" stroke="#1e293b" stroke-width="3"/>
+        <polygon points="0,-12 11,-4 7,9 -7,9 -11,-4" fill="#1e293b"/>
+      </g>
+      <!-- Waving Paintbrush -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" values="-12 520 260; 15 520 260; -12 520 260" dur="1.4s" repeatCount="indefinite"/>
+        <rect x="512" y="170" width="16" height="90" rx="6" fill="#f59e0b"/>
+        <path d="M 510 170 Q 520 135 530 170 Z" fill="#ec4899"/>
+      </g>
+      <!-- Floating Music Note -->
+      <g fill="#2563eb">
+        <animateTransform attributeName="transform" type="translate" values="0,15; 0,-18; 0,15" dur="1.6s" repeatCount="indefinite"/>
+        <circle cx="630" cy="215" r="14"/>
+        <rect x="640" y="145" width="7" height="70"/>
+        <path d="M 640 145 L 675 158 L 675 173 L 640 160 Z"/>
+      </g>
+      <rect x="260" y="75" width="280" height="44" rx="14" fill="#16a34a"/>
+      <text x="400" y="103" text-anchor="middle" font-size="16" font-weight="800" fill="#ffffff">after-school activities</text>
     `,
     collocationTitle: "after-school activities",
     collocationSub: "课外活动（常用复数 activities）",
@@ -447,26 +507,31 @@ window.WORD_BANK = [
     themeColor: "#2563eb",
     syllables: ["ad", "van", "tage"],
     mnemonicFormula: "ad-(向前) + vant-(前面) + -age(名词) → 走在最前面 = 优势",
-    mnemonicDesc: "👉 比赛中领先一步站在最前面，这就是你的【优势】！",
+    mnemonicDesc: "👉 比赛中一路超车冲在最前面，这就是你的【优势】！",
     mnemonicSpeech: "记忆口诀：站在最前面领先一步，就是 advantage，优势、好处。",
-    act2Title: "第 2 幕 · 跑道上的领先优势",
-    act2Narration: "跑道上，穿风火轮跑鞋的选手遥遥领先，占据了绝对优势！",
-    act2Subtitle: "起跑就领先一个身位——占据绝对优势（have an advantage over）！",
+    act2Title: "第 2 幕 · 赛道上弯道超车",
+    act2Narration: "蓝色小车加速冲刺，从后面一路超越红色小车，占据了绝对领先优势！",
+    act2Subtitle: "蓝色赛车一路超车冲向终点线——占据领先优势（advantage）！",
     act2Sfx: "unlock",
     act2Svg: `
-      <rect x="0" y="250" width="800" height="150" fill="#fca5a5"/>
-      <line x1="0" y1="325" x2="800" y2="325" stroke="#ffffff" stroke-width="4"/>
-      <line x1="670" y1="250" x2="670" y2="400" stroke="#ffffff" stroke-width="8" stroke-dasharray="14 10"/>
+      <rect x="0" y="210" width="800" height="170" fill="#cbd5e1"/>
+      <line x1="0" y1="295" x2="800" y2="295" stroke="#ffffff" stroke-width="5" stroke-dasharray="26 18"/>
+      <line x1="680" y1="210" x2="680" y2="380" stroke="#1e293b" stroke-width="8" stroke-dasharray="14 10"/>
+      <!-- Slow Red Car -->
       <g>
-        <circle cx="240" cy="270" r="16" fill="#fed7aa"/>
-        <rect x="228" y="286" width="24" height="32" rx="6" fill="#64748b"/>
-        <text x="240" y="245" text-anchor="middle" font-size="13" fill="#475569">落后中...</text>
+        <animateTransform attributeName="transform" type="translate" values="120,310; 340,310" dur="2.8s" repeatCount="indefinite"/>
+        <rect x="0" y="0" width="84" height="36" rx="10" fill="#ef4444"/>
+        <circle cx="18" cy="38" r="10" fill="#1e293b"/>
+        <circle cx="66" cy="38" r="10" fill="#1e293b"/>
       </g>
-      <g class="anim-slide">
-        <circle cx="540" cy="215" r="18" fill="#fed7aa"/>
-        <rect x="527" y="233" width="26" height="36" rx="6" fill="#2563eb"/>
-        <rect x="460" y="160" width="160" height="36" rx="10" fill="#2563eb"/>
-        <text x="540" y="183" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">领先优势! 🚀</text>
+      <!-- Fast Blue Car Overtaking -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="80,230; 580,230" dur="2.8s" repeatCount="indefinite"/>
+        <rect x="0" y="0" width="92" height="38" rx="10" fill="#2563eb"/>
+        <circle cx="20" cy="40" r="11" fill="#1e293b"/>
+        <circle cx="72" cy="40" r="11" fill="#1e293b"/>
+        <rect x="-15" y="-38" width="122" height="28" rx="8" fill="#1d4ed8"/>
+        <text x="46" y="-19" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">领先优势 🚀</text>
       </g>
     `,
     collocationTitle: "take advantage of",
@@ -497,22 +562,25 @@ window.WORD_BANK = [
     mnemonicFormula: "名 c 动 s（ice 冰块是名词 → advice；ise 是动词 → advise）",
     mnemonicDesc: "👉 死记口诀：advice 是【不可数名词】（不能加 s），advise 才是动词！",
     mnemonicSpeech: "记忆口诀：c 结尾的 advice 是不可数名词，s 结尾的 advise 是动词。",
-    act2Title: "第 2 幕 · 不可数名词 c vs 动词 s",
-    act2Narration: "语法考场上，有人写 advices 被扣了分；记住 ice 是名词，ise 才是动词！",
-    act2Subtitle: "避坑指南：give some advice（没有 advices！），advise sb. to do（动词）！",
+    act2Title: "第 2 幕 · 语法天平：名 c 动 s",
+    act2Narration: "天平左边是不可数名词 advice，右边是动词 advise，一字之差千万别写混！",
+    act2Subtitle: "天平晃动提醒：c 是不可数名词 advice，s 是动词 advise！",
     act2Sfx: "unlock",
     act2Svg: `
-      <rect x="85" y="120" width="280" height="220" rx="18" fill="#faf5ff" stroke="#9333ea" stroke-width="3"/>
-      <text x="225" y="165" text-anchor="middle" font-size="28" font-weight="900" fill="#7e22ce">advice (n.)</text>
-      <text x="225" y="205" text-anchor="middle" font-size="16" font-weight="700" fill="#1e293b">❌ a advice / advices</text>
-      <text x="225" y="242" text-anchor="middle" font-size="16" font-weight="800" fill="#15803d">✅ a piece of advice</text>
-      <text x="225" y="280" text-anchor="middle" font-size="14" fill="#64748b">一条建议（绝对不可数）</text>
+      <polygon points="385,360 415,360 400,200" fill="#475569"/>
+      <g>
+        <animateTransform attributeName="transform" type="rotate" values="-5 400 200; 5 400 200; -5 400 200" dur="2.6s" repeatCount="indefinite"/>
+        <line x1="170" y1="200" x2="630" y2="200" stroke="#1e293b" stroke-width="6" stroke-linecap="round"/>
+        <rect x="85" y="110" width="210" height="82" rx="14" fill="#faf5ff" stroke="#9333ea" stroke-width="3"/>
+        <text x="190" y="144" text-anchor="middle" font-size="22" font-weight="900" fill="#7e22ce">advice (n.)</text>
+        <text x="190" y="174" text-anchor="middle" font-size="14" font-weight="700" fill="#15803d">a piece of advice</text>
 
-      <rect x="435" y="120" width="280" height="220" rx="18" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
-      <text x="575" y="165" text-anchor="middle" font-size="28" font-weight="900" fill="#1d4ed8">advise (v.)</text>
-      <text x="575" y="208" text-anchor="middle" font-size="16" font-weight="800" fill="#1e293b">advise sb. to do sth.</text>
-      <text x="575" y="245" text-anchor="middle" font-size="15" fill="#475569">建议某人做某事</text>
-      <text x="575" y="280" text-anchor="middle" font-size="14" fill="#64748b">advise doing sth.</text>
+        <rect x="505" y="110" width="210" height="82" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+        <text x="610" y="144" text-anchor="middle" font-size="22" font-weight="900" fill="#1d4ed8">advise (v.)</text>
+        <text x="610" y="174" text-anchor="middle" font-size="14" font-weight="700" fill="#1d4ed8">advise sb. to do</text>
+      </g>
+      <rect x="220" y="370" width="360" height="36" rx="10" fill="#fef2f2" stroke="#fecaca"/>
+      <text x="400" y="393" text-anchor="middle" font-size="14" font-weight="800" fill="#b91c1c">⚠️ 绝对不能写 advices 或 an advice！</text>
     `,
     collocationTitle: "a piece of advice",
     collocationSub: "一条建议 / advise sb. to do sth.",
@@ -541,23 +609,30 @@ window.WORD_BANK = [
     mnemonicFormula: "谐音“爱福特”：努力攒钱，终于【买得起】福特汽车！",
     mnemonicDesc: "👉 考纲常与 can / could / be able to 连用：can afford to buy！",
     mnemonicSpeech: "记忆口诀：谐音爱福特，努力工作终于买得起，就是 afford，负担得起。",
-    act2Title: "第 2 幕 · 攒钱买下心仪自行车",
-    act2Narration: "小明的存钱罐终于攒满了！他开心地推着心仪的自行车回家，终于负担得起啦！",
-    act2Subtitle: "存钱罐叮当作响攒满了——终于买得起（can afford）心仪的单车！",
+    act2Title: "第 2 幕 · 金币叮当入罐，骑走新车",
+    act2Narration: "一枚枚金币掉进存钱罐，终于攒够钱，小明开心地骑走了心仪的自行车！",
+    act2Subtitle: "金币不断落入存钱罐——终于负担得起（can afford）心仪的单车！",
     act2Sfx: "unlock",
     act2Svg: `
-      <rect x="100" y="170" width="160" height="140" rx="20" fill="#fef3c7" stroke="#d97706" stroke-width="3"/>
-      <text x="180" y="230" text-anchor="middle" font-size="44">🐷💰</text>
-      <text x="180" y="275" text-anchor="middle" font-size="15" font-weight="800" fill="#b45309">攒够啦！</text>
-
-      <path d="M 290 240 L 380 240" stroke="#d97706" stroke-width="5" stroke-dasharray="8 6"/>
-      <polygon points="380,230 400,240 380,250" fill="#d97706"/>
-
-      <g class="anim-pulse">
-        <rect x="430" y="150" width="260" height="175" rx="18" fill="#ffffff" stroke="#059669" stroke-width="3"/>
-        <text x="560" y="218" text-anchor="middle" font-size="48">🚲</text>
-        <text x="560" y="265" text-anchor="middle" font-size="18" font-weight="800" fill="#059669">can afford to buy</text>
-        <text x="560" y="295" text-anchor="middle" font-size="14" fill="#475569">负担得起 / 买得起</text>
+      <!-- Dropping Gold Coin -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="180,80; 180,195; 180,195" keyTimes="0;0.5;1" dur="1.8s" repeatCount="indefinite"/>
+        <circle cx="0" cy="0" r="20" fill="#facc15" stroke="#b45309" stroke-width="3"/>
+        <text x="0" y="6" text-anchor="middle" font-size="18" font-weight="900" fill="#92400e">¥</text>
+      </g>
+      <!-- Piggy Bank -->
+      <ellipse cx="180" cy="255" rx="75" ry="52" fill="#f472b6" stroke="#db2777" stroke-width="3"/>
+      <rect x="160" y="200" width="40" height="8" rx="4" fill="#831843"/>
+      <circle cx="135" cy="242" r="6" fill="#1e293b"/>
+      <text x="180" y="335" text-anchor="middle" font-size="15" font-weight="800" fill="#b45309">攒够啦！</text>
+      <!-- Rolling Bike -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="380,255; 560,255; 560,255" keyTimes="0;0.75;1" dur="2.6s" repeatCount="indefinite"/>
+        <circle cx="0" cy="40" r="26" fill="none" stroke="#059669" stroke-width="6"/>
+        <circle cx="85" cy="40" r="26" fill="none" stroke="#059669" stroke-width="6"/>
+        <path d="M 0 40 L 38 5 L 72 5 L 85 40 M 38 5 L 45 40 L 0 40" fill="none" stroke="#059669" stroke-width="5" stroke-linejoin="round"/>
+        <rect x="-18" y="-52" width="130" height="32" rx="10" fill="#059669"/>
+        <text x="47" y="-31" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">can afford ✅</text>
       </g>
     `,
     collocationTitle: "afford to do sth.",
