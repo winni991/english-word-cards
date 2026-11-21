@@ -1,0 +1,25 @@
+{
+  "name": "中高考英语词汇动画",
+  "short_name": "考纲词汇",
+  "description": "中高考英语考纲词汇 4 幕 SVG 互动记忆动画",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f4f6fb",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
